@@ -88,44 +88,49 @@
 					<div data-aos="fade-up">
 						<div class="filtro">
 							<h4 class="heading mb-5" data-aos="fade-up">Busqueda avanzada</h4>
-							<form>
+							<form >
 								<div class="row">
 									<div class="col-lg">
 										<div class="form-group mb-4">
-											<select class="form-select"  name="typeOfOperation" id="typeOfOperation">
+											<select class="form-select" name="typeOfOperation" id="typeOfOperation">
 												<option value="0" selected>Tipo de operación</option>
-
+												<option value="Venta" >Venta</option>
+												<option value="Arriendo" >Arriendo</option>
+												<option value="ArriendoTemp" >Arriendo Temporal</option>
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="bathrooms" id="bathrooms">
-													<option value="0" selected>Baño(s)</option>
-											</select>
+											<input class="form-control" name="bathrooms" id="bathrooms" placeholder="Baño(s)"/>
+
+										
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="covered_parking_lots" id="covered_parking_lots">
-												<option value="0" selected>Estacionamiento</option>
-
-											</select>
+											<input class="form-control" name="covered_parking_lots" id="covered_parking_lots" placeholder="Estacionamiento(s)" />
 										</div>
 									</div>
 									<div class="col-lg">
 										<div class="form-group mb-4">
 											<select class="form-select" name="typeOfProperty" id="typeOfProperty">
 												<option value="0" selected>Tipo de propiedad</option>
+												<option value="Casa">Casa</option>
+												<option value="Departamento">Departamento</option>
+												<option value="Agricola">Agricola</option>
+												<option value="Bodega">Bodega</option>
+												<option value="Estacionamiento">Estacionamiento</option>
+												<option value="Industrial">Industrial</option>
+												<option value="Local_Comercial">Local Comercial</option>
+												<option value="Oficina">Oficina</option>
+												<option value="Parcela">Parcela</option>
+												<option value="Sitio">Sitio</option>
+												<option value="TerrenoConstruccion" >Terreno de Construccion</option>
+
+
 
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="bedrooms" id="bedrooms">
-												<option value = "0"  selected>Habitacion(es)</option>
-												<option value = "1" name="bedrooms" >1</option>
-												<option value = "2" name="bedrooms">2</option>
-												<option value = "3" name="bedrooms">3</option>
-												<option value = "4" name="bedrooms">4</option>
-												<option value = "5" name="bedrooms">5</option>
-
-											</select>
+											<input class="form-control" name="bedrooms" id="bedrooms" placeholder="Habitacion(s)"/>
+										
 										</div>
 										<div class="form-group mb-4">
 											<label class="form-check-lable" style="color: #fff !important;">Precio</label>
@@ -151,22 +156,34 @@
 										<div class="form-group mb-4">
 											<select class="form-select" name="region" id="region">
 												<option value="0" selected>Región</option>
-												<option></option>
+												<option value="AricaParinacota" >Arica y Parinacota</option>
+												<option value="Antofagasta" >Antofagasta</option>
+												<option value="Araucania" >Araucania</option>
+												<option value="Atacama" >Atacama</option>
+												<option value="AysenGeneralCarlosIbanezCampo" >Aysén del General Carlos Ibañez del Campo</option>
+												<option value="Biobío" >Biobío</option>
+												<option value="Coquimbo" >Coquimbo</option>
+												<option value="LbtGeneralBernardoOHiggins" >Libertador General Bernardo O'Higgins</option>
+												<option value="Lagos" >Los Lagos</option>
+												<option value="Rios" >Los Rios</option>
+												<option value="Magallanes" >Magallanes y la Antártica Chilena</option>
+												<option value="Maule" >Maule</option>
+												<option value="nuble" >Ñuble</option>
+												<option value="Metropolitana" >Metropolitana de Santiago</option>
+												<option value="Tarapaca" >Tarapacá</option>
+												<option value="Valparaíso" >Valparaíso</option>
 											</select>
 										</div>
 										<div class="form-group mb-4">
 											<select class="form-select" name="commune" id="commune">
-												<option value="0" selected>Habitacion(es)</option>
-												<option></option>
+												<option value="0" selected>Comuna</option>
+												<option value="Huechueava" >Huechueava</option>
 
+											
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="surface_m2" id="surface_m2">
-												<option value="0" selected>Superficie</option>
-												<option></option>
-
-											</select>
+											<input class="form-control" name="surface_m2" id="surface_m2"  placeholder="surface_m2" />										
 										</div>
 									</div>
 								</div>

@@ -94,29 +94,28 @@
 			<div class="row">
 				<div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
 					<div class="contact-info">
-						<form action="#">
+						<form action="#" >
 							<div class="row">
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Nombre">
+									<input type="text" class="form-control" placeholder="Nombre" id="nombre">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="email" class="form-control" placeholder=" E-mail">
+									<input type="email" class="form-control" placeholder=" E-mail" id="email">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Asunto">
+									<input type="text" class="form-control" placeholder="Asunto" id="asunto">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Teléfono">
+									<input type="text" class="form-control" placeholder="Teléfono" id="phone">
 								</div>
 								<div class="col-12 mb-3">
-									<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensaje"></textarea>
+									<textarea name=""  cols="30" rows="7" class="form-control" placeholder="Mensaje" id="mensaje"></textarea>
 								</div>
 								<div class="col-12 d-flex justify-content-end">
-									<input type="submit" value="Enviar" class="btn btn-primary">
+									<input type="submit" value="Enviar" class="btn btn-primary" id="enviar">
 								</div>
 							</div>
 						</form>
-
 						<div class="open-hours mt-5">
 							<i class="icon-clock-o"></i>
 							<h4 class="mb-2">Horarios:</h4>
@@ -233,5 +232,8 @@
 		<script src="js/flatpickr.js"></script>
 		<script src="js/glightbox.min.js"></script>
 		<script src="js/custom.js"></script>
+
+		<script type="module" src="js/utils/PostContact.js"></script>
+
 	</body>
 	</html>

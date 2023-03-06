@@ -6,42 +6,61 @@ let query = {}
 //Guardo referencia a todos los inputs del filtro
 document.getElementById("typeOfOperation").addEventListener( "change", (element) => {
   query.typeOperation = element.target.value;
+  console.log(element.target.value);
 });
 
 document.getElementById("typeOfProperty").addEventListener( "change", (element) => {
   query.typeOfProperty = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("region").addEventListener( "change", (element) => {
   query.region = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("commune").addEventListener( "change", (element) => {
   query.commune = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("min_price").addEventListener( "change", (element) => {
   query.min_price = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("max_price").addEventListener( "change", (element) => {
   query.max_price = element.target.value;
+  console.log(element.target.value);
+  
 });
 
 document.getElementById("bathrooms").addEventListener( "change", (element) => {
   query.bathrooms = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("bedrooms").addEventListener( "change", (element) => {
   query.bedrooms = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("surface_m2").addEventListener( "change", (element) => {
   query.surface_m2 = element.target.value;
+  console.log(element.target.value);
+
 });
 
 document.getElementById("covered_parking_lots").addEventListener( "change", (element) => {
     query.covered_parking_lots = element.target.value+0;
+  console.log(element.target.value);
+
   });
  
 
@@ -51,7 +70,7 @@ document.getElementById("buscar").addEventListener( "click", async() => {
   console.log('buscando');
   let {typeOperation, typeOfProperty, region, commune, min_price, max_price, bathrooms, bedrooms, surface_m2, covered_parking_lots} = query;
   //Paso por paramentro todos los valores de input para ser llamados en servicion 
-  let {data} = await getProperties(1, 10, typeOperation, typeOfProperty, region, commune, min_price, max_price, bathrooms, bedrooms, surface_m2, covered_parking_lots)
+  let {data} = await getProperties(1,10,5,5,typeOperation, typeOfProperty, region, commune, min_price, max_price, bathrooms, bedrooms, surface_m2, covered_parking_lots)
 
   //Aqui agregamos nuestra plantilla y cada elemento encontrado en la busqueda anterior se generara un card y seteara los datos correspondientes
   //(Esta debe ser modifiquica de acuerdo a la plantilla requirada)
