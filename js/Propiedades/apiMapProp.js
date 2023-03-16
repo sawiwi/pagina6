@@ -11,7 +11,8 @@ export default async function apiCallMap() {
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-70.680628,-33.469970],
         projection: 'globe',
-        zoom: 8.5
+        zoom: 8.5,
+        
     });
 
     let {data} = await getProperties();
@@ -39,7 +40,7 @@ export default async function apiCallMap() {
             
                 new mapboxgl.Marker({
                     color: '#1ea498',
-                    scale: .9
+                    scale: .8
                 })
             
                 // create the marker

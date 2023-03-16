@@ -10531,3 +10531,13 @@ textarea {
    top: 110; 
    bottom: 0; 
    width: 100%; } */
+
+   .mapboxgl-canvas-container{
+    width: 1920px;
+    height: 80vh !important;
+    border-radius: 15px;
+   }
+
+   .mapboxgl-canvas{
+    width:max-content !important;
+   }

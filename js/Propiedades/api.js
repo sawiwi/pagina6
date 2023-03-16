@@ -46,7 +46,7 @@ const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
             <div class="col-8">
               <div class="bg-white m-body">
                 <span class="date">${data.operation}</span>-
-                <span class="date"><b>${data.currency.isoCode}, $${data.price} </b></span>
+                <span class="date"><b>UF ${clpToUf(data.price, ufValueAsNumber)}, $${data.price} </b></span>
                 <h3 class="mt-3"><a href="/detalle_propiedad.html?${data.id}&realtorId=${5}&statusId=${5}">${data.title}</a></h3>
                 <p>${data.city != undefined && data.city != "" && data.city != null ? data.city : "No registra ciudad" }, ${data.commune != undefined && data.commune != "" && data.commune != null ? data.commune : "No registra comuna"}, Chile</p>
                 <p><b>Habitacion(es):</b> ${data.bedrooms}</p>

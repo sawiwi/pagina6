@@ -88,41 +88,54 @@
 								<div class="row">
 									<div class="col-lg">
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
+											<select class="form-select" name="operationType" id="operationType">
 												<option value="0" selected>Tipo de operación</option>
-												<option value=""></option>
-												<option value=""></option>
+												<option value="venta" >Venta</option>
+												<option value="arriendo" >Arriendo</option>
+												<option value="arriendo_temporal" >Arriendo Temporal</option>
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Habitacion(es)</option>
-												<option value="">1</option>
-												<option value="">2</option>
-											</select>
+											<select class="form-select" name="bathrooms" id="bathrooms">
+												<option value="0" selected>Baño(s)</option>
+												<option value="1" >1</option>
+												<option value="2" >2</option>
+												<option value="3" >3</option>
+												<option value="4" >4</option>
+											</select>	
+
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Estacionamiento</option>
-												<option value=""></option>
-												<option value=""></option>
+											<select class="form-select" name="covered_parking_lots" id="covered_parking_lots">
+												<option value="0" selected>Estacionamiento(s)</option>
+												<option value="1" >1</option>
+												<option value="2" >2</option>
+												<option value="3" >3</option>
+												<option value="4" >4</option>
 											</select>
+
 										</div>
 									</div>
 									<div class="col-lg">
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Tipo de operación</option>
-												<option value="">1</option>
-												<option value="">2</option>
+											<select class="form-select" name="typeOfProperty" id="typeOfProperty">
+												<option value="" selected>Tipo de propiedad</option>
+												<option value="casa">Casa</option>
+												<option value="bodega">Bodega</option>
+												<option value="departamento">Departamento</option>
+												<option value="estacionamientos">Estacionamiento</option>
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Habitacion(es)</option>
-												<option value="">1</option>
-												<option value="">2</option>
+											<select class="form-select" name="" id="bedrooms">
+												<option value="0" selected>Habitacion(s)</option>
+												<option value="1" >1</option>
+												<option value="2" >2</option>
+												<option value="3" >3</option>
+												<option value="4" >4</option>
+
 											</select>
+
 										</div>
 										<div class="form-group mb-4">
 											<label class="form-check-lable" style="color: #fff !important;">Precio</label>
@@ -136,41 +149,59 @@
 										<div class="form-group mb-4">
 											<div class="row">
 												<div class="col-lg">
-													<input type="number" class="form-control" placeholder="Desde" id="" name=""/>
+													<input type="number" class="form-control" placeholder="Desde" id="min_price" name="min_price"/>
 												</div>
 												<div class="col-lg">
-													<input type="number" class="form-control" placeholder="Hasta" id="" name=""/>
+													<input type="number" class="form-control" placeholder="Hasta" id="max_price" name="max_price"/>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="col-lg">
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
+											<select class="form-select" name="region" id="region">
 												<option value="0" selected>Región</option>
-												<option value="">1</option>
-												<option value="">2</option>
+												<option value="AricaParinacota" >Arica y Parinacota</option>
+												<option value="Antofagasta" >Antofagasta</option>
+												<option value="Araucania" >Araucania</option>
+												<option value="Atacama" >Atacama</option>
+												<option value="AysenGeneralCarlosIbanezCampo" >Aysén del General Carlos Ibañez del Campo</option>
+												<option value="Biobío" >Biobío</option>
+												<option value="Coquimbo" >Coquimbo</option>
+												<option value="LbtGeneralBernardoOHiggins" >Libertador General Bernardo O'Higgins</option>
+												<option value="Lagos" >Los Lagos</option>
+												<option value="Rios" >Los Rios</option>
+												<option value="Magallanes" >Magallanes y la Antártica Chilena</option>
+												<option value="Maule" >Maule</option>
+												<option value="nuble" >Ñuble</option>
+												<option value="Metropolitana" >Metropolitana de Santiago</option>
+												<option value="Tarapaca" >Tarapacá</option>
+												<option value="Valparaíso" >Valparaíso</option>
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Baño(s)</option>
-												<option value="">1</option>
-												<option value="">2</option>
+											<select class="form-select" name="commune" id="commune">
+												<option value="0" selected>Comuna</option>
+												<option value="Huechueava" >Huechueava</option>
+
+											
 											</select>
 										</div>
 										<div class="form-group mb-4">
-											<select class="form-select" name="" id="">
-												<option value="0" selected>Superficie</option>
-												<option value="">1</option>
-												<option value="">2</option>
-											</select>
+											<select class="form-select" name="surface_m2" id="surface_m2">
+												<option value="0" selected>Superficie m2</option>
+												<option value="1" >1</option>
+												<option value="2" >2</option>
+												<option value="3" >3</option>
+
+											</select>								
+
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-lg d-flex justify-content-center" >
-										<button type="submit" class="btn btn-primary">
+										<button type="submit" class="btn btn-primary" id="buscar">
 											Buscar
 										</button>
 									</div>
@@ -307,6 +338,10 @@
 		<script src="js/custom.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script type="module" src="/js/utils/getValuesOfinputs.js"></script>
+		<!-- <script type="module" src="/js/utils/setValuesOfInputs.js"></script> -->
+
+
 		<script type="module" src="/js/destacada_prop.js"></script>
 		<!-- <script type="module" src="/js/utils/getValuesOfinputs.js"></script> -->
 	</body>
