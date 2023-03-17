@@ -16,8 +16,8 @@ const map = new mapboxgl.Map({
 	zoom: 8.5
 });
 
-export default async function apiDetalleCall(id, realtorId, statusId) {
-let {data} = await getPropertiesForId(id, realtorId, statusId);
+export default async function apiDetalleCall(id, realtorId ,statusId, companyId) {
+let {data} = await getPropertiesForId(id, realtorId, statusId, companyId);
 
 const response = await ExchangeRateServices.getExchangeRateUF();
 const ufValue = response?.UFs[0]?.Valor
@@ -89,9 +89,9 @@ const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
 				<div class="col-md-4 sidebar">
 					<div class="">
 						<div class="sidebar-box text-center">
-							<img src="images/gal_6.jpg" class="img-fluid imgCorredor mb-3">
-							<h3 class="text-black">Nancy Deverenux</h3>
-							<p>Nancydeverenux@gmail.com</p>
+							<img src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "images/Sin.png" }" class="img-fluid imgCorredor mb-3">
+							<h3 class="text-black">${data.realtor.name} ${data.realtor.lastName}</h3>
+							<p>${data?.realtor.email || "no registra email"}</p>
 							<p>+569 9 41198136</p>
 							<div class="">
 								<input type="button" value="Contactar por whatsapp" class="btn btn-primary btn-md text-white">
@@ -168,99 +168,8 @@ const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
                     .setPopup(popup) // sets a popup on this marker
                     .addTo(map);
                     
-
-            //         map.on('click', (event) => {
-            //             // If the user clicked on one of your markers, get its information.
-            //             const features = map.queryRenderedFeatures(event.point, {
-            //               layers: ['YOUR_LAYER_NAME'] // replace with your layer name
-            //             });
-            //             if (!features.length) {
-            //               return;
-            //             }
-            //             const feature = features[0];
-                      
-            //             // Code from the next step will go here.
-            //           });
             })
-        
-        
-   
 
-// .join('');
-
-// function getProperty(id, realtorId, statusId){
-//     const response =  api.get(
-//       `properties/${id}?realtorId=${realtorId}&statusId=${statusId}`
-//     );
-//     return response.data;
-//   }
-// const getProperty = document.getElementById('getProperty');
-
-
-// let listaProp = {
-//     id : data.id,
-//     title : data.title,
-//     clp : data.price,
-//     type_prop: data.types,
-//     type_operation: data.operation,
-//     city: data.city,
-//     address: data.address,
-//     communes: data.commune,
-//     image: data.image,
-//     description: data.description,
-//     bathrooms: data.bathrooms,
-//     bedrooms: data.bedrooms,
-//     suface_m2: data.suface_m2,
-//     coveredParkingLots: data.coveredParkingLots,
-//     uncoveredParkingLots: data.uncoveredParkingLots
-//  }
- 
-
-//  document.getElementById('verProp').addEventListener('click', () =>{
-//     alert(listaProp.id)
-//  })
-
-// }
-
-// // localStorage.setItem('VerDetalle', '${dataId}');
-
-// // console.log(localStorage.getItem('VerDetalle'));
-
-// lista = [
-//     {
-//      id : dataId.id,
-//      realtorId : dataId.realtorId,
-//     //  statusId : dataId.statusId
-//     },
-
-//   ];
-  
-//   localStorage.setItem('lista', JSON.stringify(lista));
-  
-//  let getItems = JSON.parse(localStorage.getItem('lista'));
-  
-  
-
-//      getItems.forEach(element => {
-//         const btn = document.getElementsByName('btn');
-
-//         let id = element.id;
-//         // let realtor = element.realtorId;
-//         // let status = element.statusId;
-
-//         let ver = `<a href="${id}" class="more d-flex align-items-center float-start">
-//         <span class="label">Ver Detalle</span>
-//         <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
-//       </a>`
-
-//      });+
-
-
-
-// console.log(getPropertiesForId(357, 5, 5));
-// let {data} = await getPropertiesForId(id, 5, 5);
-// let {data} = await getProperties();
-// let data = data.filter(data => data.id != null && data.id != false);
 }
 
 	

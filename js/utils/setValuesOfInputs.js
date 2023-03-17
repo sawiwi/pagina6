@@ -3,9 +3,9 @@ import { getProperties } from "../services/PropertiesServices.js";
 let query = {
 	page: 1,
 	limit: 10,
-	realtorId: 5,
+	realtorId: 0,
 	statusId: 5,
-	companyId:4,
+	companyId:1,
 	operationType: "",
 	typeOfProperty: "",
 	region: "0",

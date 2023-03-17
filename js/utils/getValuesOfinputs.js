@@ -7,9 +7,9 @@ import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js"
 let query = {
   page: 1,
 	limit: 10,
-	realtorId: 5,
+	realtorId: 0,
 	statusId: 5,
-  companyId:4,
+  companyId:1,
 	operationType: "",
 	typeOfProperty: "",
 	region: "",
@@ -95,7 +95,7 @@ document.getElementById("covered_parking_lots").addEventListener( "change", (ele
 document.getElementById("buscar")?.addEventListener( "click", async() => {
   console.log('buscando');
   window.open(
-    window.location.origin + `/propiedad.html?page=${query.page}&limit=${query.limit}&realtorId=${query.realtorId}&statusId=${query.statusId}&operationType=${query.operationType}&typeOfProperty=${query.typeOfProperty}&region=${query.region}&commune=${query.commune}&min_price=${query.min_price}&max_price=${query.max_price}&bathrooms=${query.bathrooms}&bedrooms=${query.bedrooms}&surface_m2=${query.surface_m2}&covered_parking_lots=${query.covered_parking_lots}`
+    window.location.origin + `/propiedad.html?page=${query.page}&limit=${query.limit}&realtorId=${query.realtorId}&statusId=${query.statusId}&companyId=${query.companyId}&operationType=${query.operationType}&typeOfProperty=${query.typeOfProperty}&region=${query.region}&commune=${query.commune}&min_price=${query.min_price}&max_price=${query.max_price}&bathrooms=${query.bathrooms}&bedrooms=${query.bedrooms}&surface_m2=${query.surface_m2}&covered_parking_lots=${query.covered_parking_lots}`
   );
   // let {typeOperation, typeOfProperty, region, commune, min_price, max_price, bathrooms, bedrooms, surface_m2, covered_parking_lots} = query;
   //Paso por paramentro todos los valores de input para ser llamados en servicion 
@@ -138,19 +138,19 @@ document.getElementById("buscar2")?.addEventListener("click", async () => {
 		document.getElementById("container-prop-card").innerHTML = data.map((data) => 
         `<div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4" id="" data-aos="fade-up" data-aos-delay="100">
         <div class="media-entry">
-          <a href="/detalle_propiedad.html?${data.id}&realtorId=${5}&statusId=${5}">
+          <a href="/detalle_propiedad.html?${data.id}&realtorId=${0}&statusId=${5}&companyId=${1}">
             <img src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "images/Sin.png"  } " alt="Image" class="img-fluid imgCasas">
           </a>
           <div class="bg-white m-body">
             <span class="date">${data.operation}</span>-
             <span class="date"><b> UF ${clpToUf(data?.price, ufValueAsNumber )} , $${parseToCLPCurrency(data?.price)}</b></span>
-            <h3 class="mt-3"><a href="/detalle_propiedad.html?${data.id}&realtorId=${5}&statusId=${5}">${data.title}</a></h3>
+            <h3 class="mt-3"><a href="/detalle_propiedad.html?${data.id}&realtorId=${0}&statusId=${5}&companyId=${1}">${data.title}</a></h3>
             <p>${data.city != undefined && data.city != "" && data.city != null ? data.city : "No registra ciudad" }, ${data.commune != undefined && data.commune != "" && data.commune != null ? data.commune : "No registra comuna"}, Chile</p>
             <p><b>Habitacion(es):</b> ${data.bedrooms}</p>
             <p><b>Baños(s):</b>${data.bathrooms}</p>
             <p><b>Estacionamiento(s):</b> ${data.coveredParkingLots}</p>
       
-            <a href="/detalle_propiedad.html?${data.id}&realtorId=${5}&statusId=${5}" name="VerDetalle" class="more d-flex align-items-center float-start">
+            <a href="/detalle_propiedad.html?${data.id}&realtorId=${0}&statusId=${5}&companyId=${1}" name="VerDetalle" class="more d-flex align-items-center float-start">
               <span class="label">Ver Detalle</span>
               <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
             </a>

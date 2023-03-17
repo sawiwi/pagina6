@@ -9,4 +9,4 @@ const value = url.match(/\d+/)[0];
 
 
 
-apiDetalleCall(value,5, 5);
+apiDetalleCall(value, 0, 5, 1);
