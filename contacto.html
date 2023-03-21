@@ -93,29 +93,30 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<div class="contact-info">
-						<form action="#" >
+					<div class="contact-info" id="container-form-contact">
+						<form  method="post"  id="form-contact">
 							<div class="row">
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Nombre" id="nombre">
+									<input type="text" class="form-control" placeholder="Nombre" id="nombre" value="nombre">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="email" class="form-control" placeholder=" E-mail" id="email">
+									<input type="email" class="form-control" placeholder="E-mail" id="email" value="email">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Asunto" id="asunto">
+									<input type="text" class="form-control" placeholder="Asunto" id="asunto" value="asunto">
 								</div>
 								<div class="col-6 mb-3">
-									<input type="text" class="form-control" placeholder="Teléfono" id="phone">
+									<input type="text" class="form-control" placeholder="Teléfono" id="phone" value="phone">
 								</div>
 								<div class="col-12 mb-3">
-									<textarea name=""  cols="30" rows="7" class="form-control" placeholder="Mensaje" id="mensaje"></textarea>
+									<textarea  cols="30" rows="7" class="form-control" placeholder="Mensaje" id="mensaje" value="5"></textarea>
 								</div>
 								<div class="col-12 d-flex justify-content-end">
-									<input type="submit" value="Enviar" class="btn btn-primary" id="enviar">
+									<input type="submit" value="Enviar" class="btn btn-primary">
 								</div>
 							</div>
 						</form>
+						<div id="respuesta"></div>
 						<div class="open-hours mt-5">
 							<i class="icon-clock-o"></i>
 							<h4 class="mb-2">Horarios:</h4>
@@ -232,6 +233,8 @@
 		<script src="js/flatpickr.js"></script>
 		<script src="js/glightbox.min.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="sweetalert2.all.min.js"></script>
 
 		<script type="module" src="js/utils/PostContact.js"></script>
 
