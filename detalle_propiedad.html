@@ -72,14 +72,14 @@
 			<!-- FIN MENU NAVEGADOR -->
 
 
-<div id="container-detail-prop">
-	<!-- <div class="hero overlay"> 
-		<div class="img-bg rellax">
-			<img src="images/interiores4.jpg" alt="Image" class="img-fluid">
-		</div>
-	</div>
 
-	<div class="section" style="padding-top: 1rem;padding-bottom: 0rem;">
+<div class="hero overlay"> 
+	<div class="img-bg rellax">
+		<img src="images/interiores4.jpg" alt="Image" class="img-fluid">
+	</div>
+</div>
+<div id="detail-prop">
+	<!-- <div class="section" style="padding-top: 1rem;padding-bottom: 0rem;">
 		<div class="container">
 			<div class="row mb-4">
 				<div class="col-8">
@@ -101,21 +101,23 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="section" style="padding-top:2rem; padding-bottom: 1rem;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 blog-content ">
+	</div> -->
+</div>
+<div class="section" style="padding-top:2rem; padding-bottom: 1rem;" >
+	<div class="container">
+			<div class="row" id="descrip-prop">
+				<!-- <div class="col-md-12 blog-content ">
 					<p class="lead">DESCRIPCIÓN</p>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla nam aut dignissimos quasi error rem id ad, quaerat quidem explicabo harum cumque similique non animi fuga mollitia suscipit dolorem?
 					Enim voluptas alias cumque nemo repellat quos cupiditate ipsa perferendis libero nesciunt consectetur officia, repellendus doloremque, sed nihil optio quam non obcaecati repudiandae reprehenderit necessitatibus. Accusantium mollitia iste consequatur ipsum.
 					Blanditiis veniam saepe quae magni est nam in beatae, repellat quaerat assumenda rerum. Perspiciatis reiciendis possimus voluptas deserunt placeat ducimus, velit aperiam amet quaerat quas sint, voluptates unde, itaque ut.
 					Voluptatibus cum adipisci expedita mollitia in facere, sunt neque dolor ipsam repudiandae doloremque sint totam, placeat perferendis alias temporibus voluptatem. Alias repellendus deserunt corporis facilis nemo ipsa fugiat, temporibus corrupti?</p>
 
-				</div>
-				<div class="col-md-8 blog-content pe-5">
-					<p class="lead">REQUISITOS</p>
+				</div> -->
+			</div>
+			<div class="row">
+				<div class="col-md-8 blog-content pe-5" id="caract-prop">
+					<!-- <p class="lead">REQUISITOS</p>
 					<p>-Acreditar renta 3 veces al valor arriendo</p>
 					<p>-Contrato dde trabajo vigente</p>
 					<p>-Informe Dicom Platinium</p>
@@ -135,67 +137,52 @@
 							<li><a>Piso: <span>2</span></a></li>
 							<li><a>Tipo de propiedad:<span>Casa</span></a></li>
 							<li><a>Tipo de operación: <span>Arrendar</span></a></li>
-
-
-
 						</div>
-					</div>
+					</div> -->
 				</div>
-				<div class="col-md-4 sidebar">
-					<div class="">
-						<div class="sidebar-box text-center">
-							<img src="images/gal_6.jpg" class="img-fluid imgCorredor mb-3">
+				 <div class="col-md-4 sidebar" id="form-detalle">
+					 	<div class="sidebar-box text-center" id="data-realtor">
+							<!-- <img src="images/gal_6.jpg" class="img-fluid imgCorredor mb-3">
 							<h3 class="text-black">Nancy Deverenux</h3>
 							<p>Nancydeverenux@gmail.com</p>
 							<p>+569 9 41198136</p>
 							<div class="">
 								<input type="button" value="Contactar por whatsapp" class="btn btn-primary btn-md text-white">
-							</div>
-
+							</div> -->
 						</div>
-						<div class="comment-form-wrap ">
+						<div class="comment-form-wrap" >
 							<h3 class="mb-3 text-center">Contactar al corredor</h3>
-							<form action="#" class="">
+							<form action="#"  method="post"  id="form-realtor">
 								<div class="mb-3">
-									<input type="text" class="form-control" id="name" placeholder="Nombre">
+									<input type="text" class="form-control" id="name" value="Nombre">
 								</div>
 								<div class="mb-3">
-									<input type="email" class="form-control" id="email" placeholder="E-mail">
+									<input type="email" class="form-control" id="email" value="E-mail">
 								</div>
 								<div class="mb-3">
-									<input type="text" class="form-control" id="asunto" placeholder="Asunto">
+									<input type="number" class="form-control" placeholder="Teléfono" id="phone" value="phone">
 								</div>
 								<div class="mb-3">
-									<textarea name="" id="message" cols="30" rows="3" class="form-control" placeholder="Mensaje"></textarea>
+									<input type="text" class="form-control" id="asunto" value="Asunto">
+								</div>
+								<div class="mb-3">
+									<textarea  id="message" cols="30" rows="3" class="form-control" value="Mensaje"></textarea>
 								</div>
 								<div class="mb-3">
 									<input type="submit" value="Enviar" class="btn btn-primary btn-md text-white">
 								</div>
-
-							</form>
-						</div>
-					</div>
+							</form> 
+						</div> 
 				</div>
 			</div>
-		</div>
 	</div>
-
-	<div class="section" style="padding-top:0rem; padding-bottom: 1rem;">
-		<div class="container">
-			<div class="row">
-				<h1><b>UBICACIÓN DE LA PROPIEDAD</b></h1>
-				<p><i class='bx bx-map'></i> La Cruz, Valparaiso, Chile</p>
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-4" data-aos="fade-up" data-aos-delay="100">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-				</div>
-			</div>
-
-		</div>
-	</div>-->
 </div> 
+
 <div class="row">
-	<div class="col-12 col-sm-12 col-md-12 col-lg-11 mb-4" data-aos="fade-up" data-aos-delay="100">
-		<div id="map" style="width: 98%;height: 500px;padding: 10px;" class="mb-5"></div>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-11 mb-4" data-aos="fade-up" data-aos-delay="100" id="ContainerMapDetail">
+		<div id="mapDetail" style="width: 98%;height: 500px;padding: 10px;" class="mb-5">
+		
+		</div>
 	</div>
 </div>
 
@@ -272,7 +259,10 @@
 
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script type="module" src="/js/utils/PostContactDetail.js"></script> 
+		<script type="module" src="/js/utils/mapsCard.js"></script> 
 		<script type="module" src="/js/detalles_prop.js"></script> 
+
 		<!-- <script type="module" src="/js/services/ExchangeRateServices.js"></script>  -->
 
 		<!-- <script type="module" src="/js/Propiedades/apiDetalle.js"></script> -->

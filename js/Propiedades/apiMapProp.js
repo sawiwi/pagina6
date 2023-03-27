@@ -15,7 +15,7 @@ export default async function apiCallMap() {
         
     });
 
-    let {data} = await getProperties();
+    let {data} = await getProperties(0,1,1);
     const promiseMap = new Promise(
         (resolve)=>{
         data.map(data => {    
@@ -23,20 +23,26 @@ export default async function apiCallMap() {
                 if(data.LngLat === null )return; 
 
                 const LngLat= data.LngLat.replace('{','').replace('}','').replace(',', '').replace('Lat', "").split(':');
-                // console.log(LngLat[1])
-                // console.log(LngLat[2])
+            
 
                 const propiedad = [parseFloat(LngLat[1]) , parseFloat(LngLat[2])];
 
                 // create the popup
-                const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-                    `${data.title}`,
-                    `${data.price}`
-                );
+                const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
+                <span>${data.title}</span>
+                <br>
+                <a href="/detalle_propiedad.html?${data.id}&realtorId=${0}&statusId=${1}&companyId=${1}" name="VerDetalle"  class="more d-flex align-items-center float-start">
+                <span class="label" id="getProperty">Ver Detalle</span>
+                <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
+                </a>`)
                 
                 // create DOM element for the marker
                 const el = document.createElement('div');
                 el.id = 'marker';
+                // el.style.backgroundImage = `${data.img != null && data.img != '' && data.img != undefined ? data.img : "images/Sin.png"}`;
+                // el.style.width = `${50}px`;
+                // el.style.height = `${50}px`;
+                // el.style.backgroundSize = "100%";
             
                 new mapboxgl.Marker({
                     color: '#1ea498',

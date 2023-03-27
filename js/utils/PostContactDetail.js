@@ -1,14 +1,13 @@
+const formRealtor = document.getElementById('form-realtor')
 
-const form = document.getElementById('form-contact');
-
-form.addEventListener('submit', function(e) {
+formRealtor.addEventListener('submit', function(e) {
     e.preventDefault();
 
-let firstName = document.getElementById('nombre');
+let firstName = document.getElementById('name');
 let email = document.getElementById('email');
-let subject = document.getElementById('asunto');
 let phone = document.getElementById('phone');
-let message = document.getElementById('mensaje');
+let subject = document.getElementById('asunto');
+let message = document.getElementById('message');
 
 
 
@@ -41,4 +40,3 @@ fetch("https://aulen.partnersadvisers.info/contact", requestOptions)
 
 
 })
-
